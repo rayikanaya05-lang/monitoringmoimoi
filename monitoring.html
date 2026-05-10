@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring - KOI Smart System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="logo2-.png" alt="Logo" class="logo-img">
+        <span>KOI Smart System</span>
+    </div>
+    <nav>
+        <a href="index.html">home</a>
+        <a href="pengertian.html">pengertian</a>
+        <a href="monitoring.html">monitoring</a>
+    </nav>
+</header>
+
+<div class="bubbles"></div>
+
+<div class="main">
+    <section id="monitoring" class="info-box-wrapper">
+        <h2 class="info-title">Monitoring & Control</h2>
+        
+        <div class="toggle-container">
+            <div class="toggle-card">
+                <h3>Feeding (Servo)</h3>
+                <label class="switch">
+                    <input type="checkbox" id="feedingToggle">
+                    <span class="slider"></span>
+                </label>
+                <p class="toggle-status" id="feedingStatus">OFF</p>
+            </div>
+            
+            
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>pH Air</h3>
+                <p id="val-ph">--</p>
+                <div id="status-ph" class="status">Offline</div>
+            </div>
+            
+            <div class="card">
+                <h3>Suhu Air</h3>
+                <p id="val-temp">--</p>
+                <div id="status-temp" class="status">Offline</div>
+            </div>
+            
+            <div class="card">
+                <h3>Kualitas Air</h3>
+                <p id="val-quality">--</p>
+                <div id="status-quality" class="status">Aman</div>
+            </div>
+        </div>
+        
+        <div style="background: white; padding: 20px; border-radius: 15px; margin-top: 30px;">
+            <canvas id="koiChart"></canvas>
+        </div>
+
+    </section>
+</div>
+
+<footer><p>&copy; 2026 KOI MONITORING SYSTEM
+    made by Jasmine, Mayesta, Rayi</p></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
